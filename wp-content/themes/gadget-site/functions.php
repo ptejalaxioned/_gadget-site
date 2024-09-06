@@ -25,11 +25,27 @@ function my_theme_enqueue_scripts()
 //Post Option Remove
 function remove_posts_menu()
 {
-    remove_menu_page('edit.php');
+  remove_menu_page('edit.php');
 }
 add_action('admin_init', 'remove_posts_menu');
 
+//register nav menus
 register_nav_menus(
   array("primary-menu" => "Top Menu")
 );
+
+//condition for option pages
+if (function_exists('acf_add_options_page')) {
+  acf_add_options_page();
+}
+
+if (function_exists('acf_add_options_page')) {
+  acf_add_options_page(array(
+      'page_title'    => 'Theme General Settings',  
+      'menu_title'    => 'Theme Settings',          
+      'menu_slug'     => 'theme-general-settings',
+      'capability'    => 'edit_posts',              
+      'redirect'      => false                     
+  ));
+}
 
