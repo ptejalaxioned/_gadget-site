@@ -1,3 +1,5 @@
+</main>
+<!--main section end-->
 <!--footer section start-->
 <footer>
 </footer>

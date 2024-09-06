@@ -28,3 +28,8 @@ function remove_posts_menu()
     remove_menu_page('edit.php');
 }
 add_action('admin_init', 'remove_posts_menu');
+
+register_nav_menus(
+  array("primary-menu" => "Top Menu")
+);
+
