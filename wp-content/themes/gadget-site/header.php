@@ -19,12 +19,12 @@
         <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list"))
         ?>
         <div class="header-center">
-          <a href="#FIXME" class="button" target="_self">contact us</a>
+          <a href="<?php echo get_field("header_button",'option') ?>" class="button" target="_self"><?php echo get_field("header_button_text",'option') ?></a>
         </div>
         <div class="header-right">
           <ul class="icons-list">
             <li>
-              <a href="#FIXME" title="Cart" target="_self" class="cart">cart</a>
+              <a href="#FIXME" title="Cart" target="_self" class="cart"><img src="<?php echo get_field("header_button",'option') ?>" alt=""></a>
             </li>
             <li>
               <a href="#FIXME" title="Search" target="_self" class="search">search</a>
