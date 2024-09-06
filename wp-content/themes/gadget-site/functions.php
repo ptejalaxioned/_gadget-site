@@ -20,3 +20,18 @@ function my_theme_enqueue_scripts() {
   // Enqueue custom script
   wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
 }
+
+//Post Option Remove
+function remove_posts_menu() {
+  remove_menu_page('edit.php');
+}
+add_action('admin_menu', 'remove_posts_menu');
+
+
+function add_blog_posts_to_page($query) {
+  if (!is_admin() && $query->is_main_query() && is_page('blogs')) {
+      $query->set('post_type', 'blog');
+  }
+}
+add_action('pre_get_posts', 'add_blog_posts_to_page');
+?>
