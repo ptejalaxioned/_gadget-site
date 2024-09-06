@@ -206,3 +206,100 @@ li {
   margin: 0;
   box-sizing: border-box;
 }
+/*=================================
+  Header styling starts here
+=================================*/
+.all-caps { text-transform: uppercase }
+.first-letter-caps { text-transform: capitalize; }
+.single-letter-caps::first-letter { text-transform: uppercase; }
+
+header {
+  width: 100%;
+  position: absolute;
+  z-index: 4;
+  top: 0;
+}
+
+header .wrapper {
+  width: 73.3%;
+  padding: 10px 5% 17px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  display: flex;
+  background-color: #dfe5fb;
+}
+
+.header-content {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-content a { color: #6e609b; }
+.sub-list { display: none; }
+.hamburger { display: none; }
+nav { width: 60%; }
+
+.nav-list {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-list a {
+  padding: 10px;
+  font-weight: bolder;
+  font-size: 15.6px;
+  letter-spacing: .2px;
+}
+
+.header-center a {
+  background-color: #c0cffb;
+  color: #f0f8ff;
+  text-wrap: nowrap;
+}
+
+.button {
+  width: auto;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: #f0f8ff;
+  font-weight: 550;
+  font-size: 15.5px;
+  letter-spacing: .5px;
+  text-transform: uppercase;
+}
+
+.demos::after {
+  content: "\f078";
+  padding-left: 2px;
+  font-family: "FontAwesome";
+  font-size: 11px;
+}
+
+.icons-list a {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.icons-list a::before {
+  width: 100%;
+  padding: 10px 5px;
+  display: flex;
+  font-family: "FontAwesome";
+  font-size: 25px;
+  text-indent: 0;
+}
+
+.icons-list{
+  display: flex;
+}
+
+.cart::before { content: "\f07a"; }
+.search::before { content: "\f002"; }
+.earth::before { content: "\f0ac"; }
+.body-onclick{ overflow: hidden; }
+/*=================================
+  Header styling ends here
+=================================*/
