@@ -1094,3 +1094,127 @@ h5 {
 /*=================================
   tabs styling ends here
 =================================*/
+/*=================================
+technology styling starts here
+=================================*/
+.innovative-technology,
+.technical-features {
+  display: flex;
+  align-items: center;
+}
+
+.innovative-technology-left,
+.technical-features-right {
+  width: 50%;
+}
+
+.innovative-technology-right {
+  width: 45%;
+  padding-bottom: 15px;
+  padding-left: 51px;
+}
+
+.technical-features-left {
+  width: 50%;
+  padding: 0 50px 0 43px;
+}
+
+.technology .button {
+  padding: 15px 44px;
+  border-radius: 35px;
+}
+
+.technology h2 {
+  color: #57468b;
+}
+.technology .para-for-h2 {
+  margin-bottom: 20px;
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.progress-line-inner {
+  height: 5px;
+  border-radius: 35px;
+  display: flex;
+  position: relative;
+  background-color: #80808047;
+  text-indent: -9999px;
+}
+
+.progress-line-inner::before {
+  content: '';
+  text-indent: 0px;
+}
+
+.progress-line-outer {
+  height: 5px;
+  border-radius: 35px;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  text-indent: -9999px;
+}
+
+.progress-line-outer::before {
+  content: '';
+  text-indent: 0px;
+}
+
+.span-percentage {
+  margin-bottom: 11px;
+  display: flex;
+  justify-content: space-between;
+  color: #6e609b;
+  font-size: 17px;
+  font-weight: 600;
+}
+
+.progress-bar {
+  position: relative;
+}
+
+.progress-bar .blue {
+  width: 89%;
+  background-color: #5580ff;
+}
+
+.progress-bar .sky-blue {
+  width: 73%;
+  background-color: #bfceff;
+}
+
+.progress-bar .orange {
+  width: 78%;
+  background-color: #ff8a73;
+}
+
+.progress-line-outer {
+  width: 71%;
+  height: 5px;
+  display: flex;
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  text-indent: -9999px;
+}
+
+.technical-features-right,
+.innovative-technology-left {
+  height: 100%;
+  object-fit: cover;
+}
+
+.technical-features-left h2 {
+  margin-bottom: 35px;
+}
+/*=================================
+  technology styling ends here
+=================================*/
