@@ -29,6 +29,9 @@ if (have_rows('home_page_section')):
         case 'mobile_section':
           get_template_part($home_template_location, 'mobile');
           break;
+          case 'we_choose_section':
+            get_template_part($home_template_location, 'we-choose');
+            break;
     }
   endwhile;
 endif;
