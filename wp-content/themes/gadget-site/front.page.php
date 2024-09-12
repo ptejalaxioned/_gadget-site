@@ -35,9 +35,12 @@ if (have_rows('home_page_section')):
       case 'sale_countdown':
         get_template_part($home_template_location, 'sale-countdown');
         break;
-        case 'about_us':
-          get_template_part($home_template_location, 'about-us');
-          break;
+      case 'about_us':
+        get_template_part($home_template_location, 'about-us');
+        break;
+      case 'watch':
+        get_template_part($home_template_location, 'watch');
+        break;
     }
   endwhile;
 endif;
