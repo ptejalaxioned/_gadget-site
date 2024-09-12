@@ -1427,3 +1427,21 @@ footer h5 {
 /*==========================
   footer styling ends here
 =================================*/
+.single-post {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin: 150px auto 50px;
+  width: 35%;
+}
+
+.single-post-name {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.single-post-price {
+  font-size: 30px;
+  font-weight: bold;
+}
