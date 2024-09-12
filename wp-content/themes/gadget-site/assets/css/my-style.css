@@ -366,3 +366,64 @@ html {
 /*=================================
   banner styling ends here
 =================================*/
+/*=================================
+  features styling starts here
+=================================*/
+
+.features .wrapper {
+  width: 78%;
+  padding: 95px 0 100px;
+}
+
+.features-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 62px;
+}
+
+.features h4::before {
+  content: '\f00c';
+  padding: 9px 10px;
+  border-radius: 9px;
+  color: #f0f8ff;
+  font-family: 'FontAwesome';
+  font-size: 25px;
+}
+
+.features h4 {
+  margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.features p {
+  padding-left: 70px;
+}
+
+.para-for-h4 {
+  color: #918a91;
+  line-height: 25px;
+}
+
+.para-for-h4::first-letter {
+  text-transform: capitalize;
+}
+.voilet-tik::before {
+  background-color: #c0cffb;
+}
+.blue-tik::before {
+  background-color: #5580ff;
+}
+.orange-tik::before {
+  background-color: #ff8a73;
+}
+
+h4 {
+  color: #6e609b;
+  font-size: 22px;
+  font-weight: 600;
+}
+/*=================================
+  features styling ends here
+=================================*/
