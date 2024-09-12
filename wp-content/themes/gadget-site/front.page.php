@@ -20,6 +20,9 @@ if (have_rows('home_page_section')):
       case 'proven_product':
         get_template_part($home_template_location, 'proven-product');
         break;
+      case 'reliable_suppliers':
+        get_template_part($home_template_location, 'reliable-suppliers');
+        break;
     }
   endwhile;
 endif;
