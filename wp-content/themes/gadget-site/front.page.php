@@ -26,12 +26,15 @@ if (have_rows('home_page_section')):
       case 'products':
         get_template_part($home_template_location, 'products');
         break;
-        case 'mobile_section':
-          get_template_part($home_template_location, 'mobile');
-          break;
-          case 'we_choose_section':
-            get_template_part($home_template_location, 'we-choose');
-            break;
+      case 'mobile_section':
+        get_template_part($home_template_location, 'mobile');
+        break;
+      case 'we_choose_section':
+        get_template_part($home_template_location, 'we-choose');
+        break;
+      case 'sale_countdown':
+        get_template_part($home_template_location, 'sale-countdown');
+        break;
     }
   endwhile;
 endif;
