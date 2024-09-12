@@ -41,12 +41,15 @@ if (have_rows('home_page_section')):
       case 'watch':
         get_template_part($home_template_location, 'watch');
         break;
-        case 'tabs':
-          get_template_part($home_template_location, 'tabs');
-          break;
-          case 'technology':
-            get_template_part($home_template_location, 'technology');
-            break;
+      case 'tabs':
+        get_template_part($home_template_location, 'tabs');
+        break;
+      case 'technology':
+        get_template_part($home_template_location, 'technology');
+        break;
+      case 'faq_section':
+        get_template_part($home_template_location, 'faq');
+        break;
     }
   endwhile;
 endif;
