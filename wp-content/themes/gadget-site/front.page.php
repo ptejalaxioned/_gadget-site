@@ -44,6 +44,9 @@ if (have_rows('home_page_section')):
         case 'tabs':
           get_template_part($home_template_location, 'tabs');
           break;
+          case 'technology':
+            get_template_part($home_template_location, 'technology');
+            break;
     }
   endwhile;
 endif;
