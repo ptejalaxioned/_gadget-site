@@ -1276,3 +1276,154 @@ technology styling starts here
 /*=================================
   faq styling ends here
 =================================*/
+/*=================================
+  footer styling starts here
+=================================*/
+footer {
+  padding: 50px 27px 78px 27px;
+  clip-path: ellipse(137% 92% at 50% 92%);
+}
+
+footer .wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+footer img {
+  width: 60px;
+}
+footer div {
+  width: 25%;
+}
+
+footer {
+  background-color: #343351;
+  color: #f0f8ff;
+}
+
+.footer-left {
+  padding-right: 18px;
+}
+.footer-left p {
+  padding: 16px 0 12px;
+}
+
+.social-media-icons a {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.social-media-icons {
+  padding-top: 6px;
+  display: flex;
+  gap: 14px;
+}
+
+.contact-detailes {
+  padding-top: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+footer h5 {
+  color: #f0f8ff;
+}
+
+.address::before {
+  content: '\f167';
+  color: #f0f8ff;
+  font-family: 'FontAwesome';
+}
+
+.address {
+  display: flex;
+  color: #f0f8ff;
+  font-size: 16px;
+  gap: 10px;
+}
+
+.location::before {
+  content: '\f3c5';
+}
+.pin::before {
+  content: '\f08d';
+}
+.email-icon::before {
+  content: '\f0e0';
+}
+.phone-number::before {
+  content: '\f095';
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.apple-google {
+  width: 50%;
+  padding-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-right a::before {
+  color: #f0f8ff;
+  font-family: 'FontAwesome';
+  font-weight: 100;
+}
+
+.footer-right img {
+  width: 100%;
+}
+
+.theme {
+  display: flex;
+  align-items: baseline;
+  color: #f0f8ff;
+  font-size: 17px;
+  font-weight: 700;
+  gap: 10px;
+}
+
+.footer-center-right {
+  position: relative;
+}
+
+.popuptext {
+  width: 275px;
+  padding: 18px 14px;
+  border-radius: 9px;
+  background-color: #00000018;
+  color: #fff;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  font-size: 15.5px;
+  line-height: 24px;
+}
+
+.popuptext::after {
+  content: '';
+  position: absolute;
+  border-width: 10px;
+  border-style: solid;
+  border-color: #00000018 transparent transparent transparent;
+  z-index: 1;
+  top: 87%;
+  left: 6%;
+  transform: rotate(134deg);
+}
+
+.theme {
+  position: absolute;
+  bottom: 29%;
+}
+/*==========================
+  footer styling ends here
+=================================*/
