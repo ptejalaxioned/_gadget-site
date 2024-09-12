@@ -487,3 +487,89 @@ h2 {
 /*=================================
 proven-product styling ends here
 =================================*/
+/*======================================
+ reliable-suppliers styling starts here
+========================================*/
+.reliable-suppliers {
+  padding: 47px 0 230px;
+}
+
+.reliable-suppliers .wrapper {
+  display: flex;
+  align-items: end;
+  gap: 4%;
+}
+
+.reliable-suppliers-right {
+  width: 48%;
+  display: flex;
+  justify-content: end;
+  align-items: start;
+  position: relative;
+}
+
+.reliable-suppliers-left {
+  width: 48%;
+}
+
+.reliable-suppliers-img-up {
+  position: absolute;
+  z-index: 2;
+  left: 0;
+  top: 20%;
+}
+
+.reliable-suppliers-img-down img {
+  width: 455px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.reliable-suppliers-img-up img {
+  width: 320px;
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.reliable-suppliers .button {
+  padding: 15px 44px;
+  border-radius: 35px;
+}
+/*======================================
+ reliable-suppliers styling ends here
+========================================*/
+/*=================================
+  products styling starts here
+=================================*/
+.products .wrapper {
+  width: 100%;
+}
+
+.product-up {
+  width: 82%;
+  padding: 60px 0;
+  margin: auto;
+  display: flex;
+  gap: 3%;
+}
+
+.common-para {
+  color: #918a91;
+  font-size: 18px;
+  line-height: 29px;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-list li {
+  width: 25%;
+}
+/*=================================
+  products styling ends here
+=================================*/
+
