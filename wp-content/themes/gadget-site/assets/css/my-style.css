@@ -661,3 +661,31 @@ proven-product styling ends here
 /*=================================
   mobile styling ends here
 =================================*/
+/*=================================
+  we-choose styling starts here
+=================================*/
+.we-choose {
+  padding: 54px 0;
+  background-color: #f2f6ff;
+}
+
+.we-choose .wrapper {
+  display: flex;
+}
+.we-choose h2,
+.we-choose p {
+  width: 50%;
+}
+
+.we-choose h2 {
+  padding-right: 50px;
+  border-right: 0.5px solid #918a9162;
+  font-size: 45px;
+}
+
+.we-choose p {
+  padding-left: 60px;
+}
+/*=================================
+  we-choose styling ends here
+=================================*/
