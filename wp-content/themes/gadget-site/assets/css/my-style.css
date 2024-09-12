@@ -1037,3 +1037,26 @@ h5 {
 /*=================================
   about-us styling ends here
 =================================*/
+/*=================================
+  watch styling starts here
+=================================*/
+.watch {
+  padding: 152px 0 0;
+}
+.watch .wrapper {
+  width: 100%;
+}
+
+.watch p {
+  width: 82%;
+  margin: auto auto 55px;
+}
+
+.watch img {
+  height: auto;
+  object-fit: cover;
+  width: 100%;
+}
+/*=================================
+  watch styling ends here
+=================================*/
