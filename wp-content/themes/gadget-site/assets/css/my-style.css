@@ -1218,3 +1218,61 @@ technology styling starts here
 /*=================================
   technology styling ends here
 =================================*/
+/*=================================
+  faq styling starts here
+=================================*/
+.faq {
+  padding: 63px 0 123px 0;
+}
+
+.faq h2 {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.accordion li {
+  width: 100%;
+  background-color: #f2f6ff;
+  color: #57468b;
+}
+
+.accordion-up {
+  padding: 20px 37px 20px 25px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.accordion-down {
+  padding: 0 37px 20px 25px;
+  display: none;
+  color: #918a91;
+}
+
+.arrow-down {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.arrow-down::before {
+  content: '\f078';
+  display: flex;
+  font-family: 'FontAwesome';
+  font-size: 23px;
+  font-weight: 100;
+  text-indent: 0;
+}
+
+.question {
+  font-size: 23px;
+  font-weight: 600;
+}
+/*=================================
+  faq styling ends here
+=================================*/
