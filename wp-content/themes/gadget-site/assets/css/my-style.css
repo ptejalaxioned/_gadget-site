@@ -948,3 +948,92 @@ h5 {
 /*=================================
  sale-countdown styling ends here
 =================================*/
+/*=================================
+  about-us styling starts here
+=================================*/
+.about-us .wrapper {
+  width: 100%;
+  background-color: #8080804d;
+  color: #f0f8ff;
+}
+
+.about-us {
+  background-color: grey;
+}
+
+.about-us h3 {
+  margin-bottom: 24px;
+  color: #f0f8ff;
+  font-weight: 100;
+}
+
+.about-us p {
+  color: #e2e0e2;
+  font-size: 17px;
+  letter-spacing: 1px;
+  line-height: 26px;
+}
+
+.background-image::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 0;
+  background-color: #80808068;
+}
+
+.background-image {
+  height: 78.5vh;
+}
+
+.background-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+.about-us .wrapper {
+  position: relative;
+}
+
+.about-us-content {
+  width: 59%;
+  position: absolute;
+  z-index: 3;
+  left: 50%;
+  top: 52%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.about-us-content figure {
+  width: 75px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.about-us span {
+  display: block;
+}
+
+.role {
+  font-size: 14.5px;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+}
+
+.content-down figure {
+  margin: 24px auto 15px;
+}
+
+.person-name {
+  margin-bottom: 5px;
+  font-size: 15.5px;
+  font-weight: 550;
+}
+/*=================================
+  about-us styling ends here
+=================================*/
