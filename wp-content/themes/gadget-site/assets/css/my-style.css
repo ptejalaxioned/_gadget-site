@@ -572,4 +572,92 @@ proven-product styling ends here
 /*=================================
   products styling ends here
 =================================*/
+/*=================================
+  mobile styling starts here
+=================================*/
+.mobile {
+  padding: 72px 0;
+}
 
+.mobile .wrapper {
+  display: flex;
+  align-items: center;
+  gap: 59px;
+}
+
+.mobile img {
+  width: 329px;
+  height: auto;
+  object-fit: cover;
+}
+
+.mobile ul {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
+}
+
+.mobile h4 {
+  margin-bottom: 8px;
+  display: flex;
+  gap: 25px;
+}
+
+.mobile-list-left h4::after {
+  font-family: 'FontAwesome';
+  font-size: 35px;
+}
+
+.mobile-list-right h4::before {
+  font-family: 'FontAwesome';
+  font-size: 35px;
+}
+
+.globe::after {
+  content: '\f0ac';
+}
+
+.chat::after {
+  content: '\f27a';
+  color: #5580ff;
+}
+
+.project::after {
+  content: '\f1d8';
+  color: #ff8a73;
+}
+
+.security::before {
+  content: '\f3ed';
+  color: #ff8a73;
+}
+
+.computer::before {
+  content: '\e4e5';
+  color: #c0cffb;
+}
+
+.setting::before {
+  content: '\f013';
+}
+.mobile-list-right {
+  text-align: start;
+}
+.mobile-list-left {
+  text-align: end;
+}
+.mobile-list-right p {
+  padding-left: 63px;
+}
+.mobile-list-left p {
+  padding-right: 63px;
+}
+.mobile-list-right h4 {
+  justify-content: start;
+}
+.mobile-list-left h4 {
+  justify-content: end;
+}
+/*=================================
+  mobile styling ends here
+=================================*/
