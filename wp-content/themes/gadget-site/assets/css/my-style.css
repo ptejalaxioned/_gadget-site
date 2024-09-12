@@ -427,3 +427,63 @@ h4 {
 /*=================================
   features styling ends here
 =================================*/
+/*=================================
+proven-product styling starts here
+=================================*/
+h2 {
+  margin-bottom: 30px;
+  color: #57468b;
+}
+.proven-product {
+  padding: 69px 0 100px;
+  background-color: #f2f6ff;
+}
+
+.proven-product .wrapper {
+  display: flex;
+  align-items: end;
+  gap: 9%;
+}
+
+.proven-product img {
+  height: auto;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+.proven-product-right {
+  width: 32%;
+  padding-bottom: 5px;
+}
+
+.proven-product-left {
+  width: 60%;
+}
+h2 {
+  font-size: 44px;
+}
+
+.para-for-h2 {
+  margin: 22px 0 45px;
+  color: #918a91;
+  font-size: 19px;
+  line-height: 29px;
+}
+
+.proven-product .button {
+  padding: 15px 44px;
+  border-radius: 35px;
+}
+
+.proven-product img {
+  width: 549px;
+  height: auto;
+  object-fit: cover;
+}
+
+.proven-product figure {
+  padding-left: 73px;
+}
+/*=================================
+proven-product styling ends here
+=================================*/
