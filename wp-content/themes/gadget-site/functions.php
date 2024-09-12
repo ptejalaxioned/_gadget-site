@@ -54,3 +54,61 @@ if (function_exists('acf_add_options_page')) {
 ));
 }
 
+//enable classic editor and disable  gutenberg
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_widgets_block_editor', '__return_false');
+
+
+//category filter
+function ajax_filter_posts_by_category()
+{
+  $data = isset($_POST['data']) ? sanitize_text_field($_POST['data']) : '';
+
+  if ($data != "all") {
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => -1,
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'terms'    =>  $data,
+          'operator' => 'IN',
+        ),
+      ),
+    );
+  } else {
+    $args = array(
+      'post_type' => 'post',
+      'posts_per_page' => -1,
+      'tax_query' => array(
+        array(
+          'taxonomy' => 'category',
+          'field'    => 'slug',
+          'operator' => 'Exists',
+        ),
+      ),
+    );
+  }
+  $all_posts = new WP_Query($args);
+  $posts_data = array();
+
+  if ($all_posts->have_posts()) {
+    while ($all_posts->have_posts()) {
+      $all_posts->the_post();
+      $post_data = array(
+        'title' => get_the_title(),
+        'permalink' => get_the_permalink(),
+        'thumbnail' => has_post_thumbnail() ? get_the_post_thumbnail_url(get_the_ID(), 'full') : '',
+        'price' => get_field('price') ? get_field('price') : ''
+      );
+      $posts_data[] = $post_data;
+    }
+    wp_reset_postdata();
+  } else {
+    $posts_data = array('message' => 'No posts found.');
+  }
+  wp_send_json($posts_data);
+}
+add_action('wp_ajax_filter_posts_by_category', 'ajax_filter_posts_by_category');
+add_action('wp_ajax_nopriv_filter_posts_by_category', 'ajax_filter_posts_by_category');
