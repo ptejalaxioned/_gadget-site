@@ -1060,3 +1060,37 @@ h5 {
 /*=================================
   watch styling ends here
 =================================*/
+/*=================================
+  tabs styling starts here
+=================================*/
+.tabs {
+  padding: 60px 0 112px;
+}
+
+.tab-list {
+  width: 100%;
+  border-bottom: 1px solid #918a918d;
+  display: flex;
+  justify-content: start;
+  gap: 30px;
+}
+
+.tab-list a {
+  padding: 15px 20px;
+}
+.tabs .common-para {
+  font-size: 17px;
+}
+
+.tab-list a:first-child {
+  padding-left: 0;
+  color: #918a9179;
+  font-weight: 700;
+}
+
+.data {
+  padding-top: 22px;
+}
+/*=================================
+  tabs styling ends here
+=================================*/
