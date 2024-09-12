@@ -303,3 +303,66 @@ nav { width: 60%; }
 /*=================================
   Header styling ends here
 =================================*/
+/*=================================
+  banner styling starts here
+=================================*/
+.banner {
+  position: relative;
+}
+.banner .wrapper {
+  width: 100%;
+}
+.main-image {
+  clip-path: ellipse(136% 49% at 50% 40%);
+}
+
+.banner-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+  left: 50%;
+  top: 57%;
+  color: #f0f8ff;
+  transform: translate(-50%, -50%);
+}
+
+.banner-buttons {
+  padding: 30px 0 60px;
+  display: flex;
+  gap: 14px;
+}
+
+.banner-buttons .button {
+  padding: 16px 48px;
+  border-radius: 41px;
+}
+
+.orange-button {
+  background-color: #ff8a73;
+}
+.blue-button {
+  background-color: #5580ff;
+}
+h1 {
+  font-size: 55px;
+}
+
+h1 a {
+  margin-bottom: 20px;
+  color: #f0f8ff;
+}
+
+.banner-content-image img {
+  width: 751px;
+  height: auto;
+  border-radius: 14px;
+  object-fit: cover;
+}
+html {
+  margin-top: 0px !important;
+}
+/*=================================
+  banner styling ends here
+=================================*/
