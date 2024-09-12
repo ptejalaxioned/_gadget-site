@@ -41,6 +41,9 @@ if (have_rows('home_page_section')):
       case 'watch':
         get_template_part($home_template_location, 'watch');
         break;
+        case 'tabs':
+          get_template_part($home_template_location, 'tabs');
+          break;
     }
   endwhile;
 endif;
