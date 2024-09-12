@@ -14,6 +14,9 @@ if (have_rows('home_page_section')):
       case 'banner_section':
         get_template_part($home_template_location, 'banner');
         break;
+        case 'features_section':
+          get_template_part($home_template_location, 'features');
+          break;
     }
   endwhile;
 endif;
