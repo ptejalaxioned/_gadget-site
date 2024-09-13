@@ -67,11 +67,6 @@ if (function_exists('acf_add_options_page')) {
 ));
 }
 
-//enable classic editor and disable  gutenberg
-// add_filter('use_block_editor_for_post', '__return_false', 10);
-// add_filter('use_widgets_block_editor', '__return_false');
-
-
 //category filter
 function ajax_filter_posts_by_category()
 {
