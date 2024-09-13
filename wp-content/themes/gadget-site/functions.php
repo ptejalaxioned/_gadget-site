@@ -20,6 +20,14 @@ function my_theme_enqueue_scripts()
   wp_enqueue_style('custom-styling', get_template_directory_uri() . '/assets/css/my-style.css', array(), '1.0', 'all');
   // Enqueue custom script
   wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
+
+// Enqueue Font Awesome script
+wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null, true);
+
+// Localize script for AJAX
+wp_localize_script('custom-script', 'ajax_object', array(
+  'ajaxurl' => admin_url('admin-ajax.php')
+));
 }
 
 //Post Option Remove
@@ -52,11 +60,16 @@ if (function_exists('acf_add_options_page')) {
     'menu_title'  => 'Header',            
     'parent_slug' => 'theme-general-settings', 
 ));
+acf_add_options_sub_page(array(
+  'page_title'  => 'Footer Settings',    
+  'menu_title'  => 'Footer',            
+  'parent_slug' => 'theme-general-settings', 
+));
 }
 
 //enable classic editor and disable  gutenberg
-// add_filter('use_block_editor_for_post', '__return_false', 10);
-// add_filter('use_widgets_block_editor', '__return_false');
+add_filter('use_block_editor_for_post', '__return_false', 10);
+add_filter('use_widgets_block_editor', '__return_false');
 
 
 //category filter

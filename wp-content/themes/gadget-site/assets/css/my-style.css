@@ -283,22 +283,11 @@ nav { width: 60%; }
   text-indent: -9999px;
 }
 
-.icons-list a::before {
-  width: 100%;
-  padding: 10px 5px;
-  display: flex;
-  font-family: "FontAwesome";
-  font-size: 25px;
-  text-indent: 0;
-}
 
 .icons-list{
   display: flex;
 }
 
-.cart::before { content: "\f07a"; }
-.search::before { content: "\f002"; }
-.earth::before { content: "\f0ac"; }
 .body-onclick{ overflow: hidden; }
 /*=================================
   Header styling ends here
