@@ -16,8 +16,10 @@
     <!--header section start-->
     <header>
       <div class="wrapper">
-        <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list"))
-        ?>
+        <nav>
+          <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list"))
+          ?>
+        </nav>
     </header>
     <!--header section end-->
     <!--main section start-->
