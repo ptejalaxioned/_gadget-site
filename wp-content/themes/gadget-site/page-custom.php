@@ -2,8 +2,8 @@
 /*
 Template Name: Custom Page Template
 */
-?>
-<?php get_header();
+get_header();
+
 ?>
 <main id="main-content">
   <section id="custom-page-section">
@@ -16,4 +16,3 @@ Template Name: Custom Page Template
     ?>
   </section>
 </main>
-<?php get_footer(); ?>

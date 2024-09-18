@@ -18,6 +18,11 @@ function my_theme_enqueue_scripts()
 {
   // Enqueue custom styling
   wp_enqueue_style('custom-styling', get_template_directory_uri() . '/assets/css/my-style.css', array(), '1.0', 'all');
+ 
+ 
+  // Enqueue custom styling
+  wp_enqueue_style('custom-styling-block', get_template_directory_uri() . '/assets/css/my-custom-block.css', array(), '1.0', 'all');
+
   // Enqueue custom script
   wp_enqueue_script('custom-script', get_template_directory_uri() . '/assets/js/script.js', array('jquery'));
 
@@ -120,3 +125,20 @@ function ajax_filter_posts_by_category()
 }
 add_action('wp_ajax_filter_posts_by_category', 'ajax_filter_posts_by_category');
 add_action('wp_ajax_nopriv_filter_posts_by_category', 'ajax_filter_posts_by_category');
+
+//custom block
+if (function_exists('acf_register_block')) {
+  add_action('acf/init', 'register_acf_blocks');
+}
+
+function register_acf_blocks()
+{
+  acf_register_block(array(
+    'name'              => 'my-custom-block',
+    'title'             => __('My Custom Block'),
+    'description'       => __('A Custom Block'),
+    'render_template' => get_theme_file_path() . '/content-block.php',
+    'icon'              => 'book',
+    'keywords'          => array('my-custom-block'),
+  ));
+}
