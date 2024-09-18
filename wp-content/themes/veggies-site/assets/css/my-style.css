@@ -232,12 +232,50 @@ header {
   font-weight: 900;
 }
 
-.hamburger { display: none; }
+.hamburger {
+  display: none;
+}
+
 /*=================================
   Header styling ends here
 =================================*/
 /*=================================
   main styling starts here
+=================================*/
+/*=================================
+  Banner styling starts here
+=================================*/
+.banner {
+  position: relative;
+}
+
+.banner .wrapper {
+  width: 100%;
+  position: relative;
+}
+
+.banner-image {
+  height: 100%;
+  object-fit: cover;
+}
+
+.banner-content {
+  width: 37%;
+  position: absolute;
+  z-index: 2;
+  left: 76%;
+  top: 48.6%;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+
+.banner-content h1 {
+  padding-bottom: 18px;
+  color: #3f3c3c;
+  font-size: 41px;
+}
+/*=================================
+  Banner styling ends here
 =================================*/
 /*=================================
   main styling ends here
