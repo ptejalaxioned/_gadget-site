@@ -1,7 +1,9 @@
 <?php
 function my_acf_init() {
   register_acf_blocks('banner', 'banner', 'A custom banner block', '/inc/blocks/content-banner.php', 'admin-comments');
+  register_acf_blocks('turnip-green', 'turnip-green', 'A custom turnip-green block', '/inc/blocks/content-turnip-green.php', 'admin-comments');
 }
+
 function register_acf_blocks($slug, $title, $description, $template_loc, $icon) {
   if( function_exists('acf_register_block') ) {
     acf_register_block(array(
