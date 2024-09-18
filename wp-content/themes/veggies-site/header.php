@@ -15,7 +15,7 @@
   <div class="container">
     <!--header section start-->
     <header>
-    <div class="wrapper">
+      <div class="wrapper">
         <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list"))
         ?>
     </header>
