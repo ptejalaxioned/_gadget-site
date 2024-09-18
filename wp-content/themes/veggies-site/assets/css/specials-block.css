@@ -1,0 +1,24 @@
+/*=================================
+  specials styling starts here
+=================================*/
+.specials {
+  padding: 69px 0 104px;
+}
+
+.specials .wrapper {
+  width: 89.8%;
+}
+
+.img-list {
+  width: 100%;
+  margin: 66px auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.img-list li {
+  width: 16.66%;
+}
+/*=================================
+  specials styling ends here
+=================================*/

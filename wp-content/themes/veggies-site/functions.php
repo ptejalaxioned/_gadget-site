@@ -19,12 +19,14 @@ function my_theme_enqueue_scripts()
   // Enqueue custom styling
   wp_enqueue_style('custom-styling', get_template_directory_uri() . '/assets/css/my-style.css', array(), '1.0', 'all');
 
- // Enqueue banner-block-styling
- wp_enqueue_style('banner-block-styling', get_template_directory_uri() . '/assets/css/banner-block.css', array(), '1.0', 'all');
+  // Enqueue banner-block-styling
+  wp_enqueue_style('banner-block-styling', get_template_directory_uri() . '/assets/css/banner-block.css', array(), '1.0', 'all');
 
- // Enqueue banner-block-styling
- wp_enqueue_style('turnip-green-block-styling', get_template_directory_uri() . '/assets/css/turnip-green-block.css', array(), '1.0', 'all');
+  // Enqueue turnip-green-block-styling
+  wp_enqueue_style('turnip-green-block-styling', get_template_directory_uri() . '/assets/css/turnip-green-block.css', array(), '1.0', 'all');
 
+  // Enqueue specials-block-styling
+  wp_enqueue_style('specials-block-styling', get_template_directory_uri() . '/assets/css/specials-block.css', array(), '1.0', 'all');
 
   // Enqueue Font Awesome script
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null, true);
