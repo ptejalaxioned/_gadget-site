@@ -1,0 +1,43 @@
+/*=================================
+  about-us styling starts here
+=================================*/
+.about-us {
+  padding: 82px 0 124px;
+  background-color: #ddd;
+  color: #767676;
+}
+
+.about-us .wrapper {
+  display: flex;
+  gap: 41px;
+  align-items: center;
+}
+
+.about-us-left {
+  width: 50%;
+}
+
+.about-us p {
+  font-size: 30px;
+  letter-spacing: 1px;
+  padding-top: 72px;
+}
+
+.about-us-left {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.sign {
+  width: 40%;
+}
+
+.sign-div {
+  display: flex;
+  justify-content: end;
+}
+
+/*=================================
+  about-us styling ends here
+=================================*/
