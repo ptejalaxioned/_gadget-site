@@ -40,7 +40,7 @@
 }
 
 .bowl::before {
-  content: "";
+  content: " ";
   font-family: "fontAwesome";
   display: flex;
   text-indent: 0;
