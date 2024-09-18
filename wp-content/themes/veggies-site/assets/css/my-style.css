@@ -210,6 +210,29 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
+header {
+  width: 100%;
+  padding: 20px 0px;
+  position: absolute;
+  z-index: 3;
+  left: 0;
+  top: 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: end;
+}
+
+.nav-list a {
+  padding: 12px 13px;
+  border: 1px solid transparent;
+  color: #a7a7a7;
+  font-size: 17px;
+  font-weight: 900;
+}
+
+.hamburger { display: none; }
 /*=================================
   Header styling ends here
 =================================*/
