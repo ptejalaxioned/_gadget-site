@@ -28,6 +28,9 @@ function my_theme_enqueue_scripts()
   // Enqueue specials-block-styling
   wp_enqueue_style('specials-block-styling', get_template_directory_uri() . '/assets/css/specials-block.css', array(), '1.0', 'all');
 
+  // Enqueue about-us-block-styling
+  wp_enqueue_style('about-us-block-styling', get_template_directory_uri() . '/assets/css/about-us-block.css', array(), '1.0', 'all');
+
   // Enqueue Font Awesome script
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null, true);
 
