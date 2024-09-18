@@ -19,8 +19,11 @@ function my_theme_enqueue_scripts()
   // Enqueue custom styling
   wp_enqueue_style('custom-styling', get_template_directory_uri() . '/assets/css/my-style.css', array(), '1.0', 'all');
 
- // Enqueue custom styling
+ // Enqueue banner-block-styling
  wp_enqueue_style('banner-block-styling', get_template_directory_uri() . '/assets/css/banner-block.css', array(), '1.0', 'all');
+
+ // Enqueue banner-block-styling
+ wp_enqueue_style('turnip-green-block-styling', get_template_directory_uri() . '/assets/css/turnip-green-block.css', array(), '1.0', 'all');
 
 
   // Enqueue Font Awesome script

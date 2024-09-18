@@ -1,0 +1,51 @@
+/*=================================
+  turnip-green styling starts here
+=================================*/
+.turnip-green {
+  padding: 129px 0;
+  background-color: #e7b90e;
+  color: #3f3c3c;
+}
+
+.turnip-green h4 {
+  padding: 18px 0 22px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.turnip-green p {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.turnip-green-list {
+  display: flex;
+  gap: 45px;
+}
+
+.turnip-green-list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.bowl {
+  font-size: 80px;
+}
+
+.bowl {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.bowl::before {
+  content: "";
+  font-family: "fontAwesome";
+  display: flex;
+  text-indent: 0;
+}
+
+/*=================================
+  turnip-green styling ends here
+=================================*/
