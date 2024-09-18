@@ -207,6 +207,17 @@ li {
   box-sizing: border-box;
 }
 
+.wrapper {
+  max-width: 1920px;
+  width: 86.7%;
+  margin: 0 auto; }
+
+.all-caps, .single-caps::first-letter {
+  text-transform: uppercase; }
+
+.first-caps {
+  text-transform: capitalize; }
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -273,7 +284,7 @@ header {
   padding-bottom: 18px;
   color: #3f3c3c;
   font-size: 41px;
-}
+} 
 /*=================================
   Banner styling ends here
 =================================*/
@@ -283,3 +294,6 @@ header {
 /*==========================
   footer styling ends here
 =================================*/
+html{
+  margin-top: 0px;
+}

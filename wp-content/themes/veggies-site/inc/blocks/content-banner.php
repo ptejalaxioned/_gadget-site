@@ -14,9 +14,8 @@ $background_image_alt= $background_image['alt'];
             <div class="banner-content">
               <div class="heading-span">
                 <h1 class="single-caps">
-  <?php echo $banner_hedaing ?>
+                <?php echo $banner_hedaing ?>
                 </h1>
-                <span class="line-h"> line </span>
               </div>
             </div>
           </div>

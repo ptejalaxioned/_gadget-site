@@ -4,6 +4,12 @@
  */
 ?>
 <?php get_header(); ?>
+ <?php
+    while (have_posts()) { 
+      the_post();
+      the_content();
+    }
+    ?>
 <?php
 $home_template_location = 'template-parts/home/content';
 // if (have_rows('home_page_section')){
