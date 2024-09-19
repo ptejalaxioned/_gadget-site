@@ -251,6 +251,7 @@ h2 {
   font-size: 44px;
   font-weight: 900;
 }
+
 /*=================================
   Header styling starts here
 =================================*/
@@ -287,45 +288,188 @@ header {
   main styling starts here
 =================================*/
 /*=================================
-  Banner styling starts here
+  footer styling starts here
 =================================*/
-.banner {
-  position: relative;
-}
-
-.banner .wrapper {
-  width: 100%;
-  position: relative;
-}
-
-.banner-image {
-  height: 100%;
-  object-fit: cover;
-}
-
-.banner-content {
-  width: 37%;
+.contact {
+  color: #767676;
   position: absolute;
   z-index: 2;
-  left: 76%;
-  top: 48.6%;
+  left: 55%;
+  top: 0;
+}
+
+.contact button {
+  padding: 16px 30px;
+  border: 1px solid #000;
+  background-color: transparent;
+  color: #767676;
+  font-size: 16px;
+  font-weight: bolder;
+}
+
+.contact h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+.contact .form-h {
+  margin-bottom: 13px;
+}
+
+.contact a {
+  color: #767676;
+}
+
+.contact textarea {
+  height: 207px;
+  width: 100%;
+  padding: 10px 13px;
+  border: none;
+  border-bottom: 0.5px solid #f0f8ff;
+  background-color: transparent;
+  font-size: 17px;
+  resize: none;
+}
+
+.contact .send-button {
+  margin-top: 30px;
   text-align: center;
-  transform: translate(-50%, -50%);
 }
 
-.banner-content h1 {
-  padding-bottom: 18px;
+.contact .info {
+  line-height: 23px;
+}
+
+.contact {
+  width: 36.5%;
+  margin: 52px auto auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-info-list {
+  margin: 76px 0 57px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contact-info-list li {
+  width: 41%;
+}
+
+.name-email {
+  display: flex;
+  justify-content: space-between;
+}
+
+.name-email-div {
+  width: 47.5%;
+}
+
+.name-email input {
+  width: 100%;
+  padding: 10px 13px;
+  border: none;
+  border-bottom: 0.5px solid #f0f8ff;
+  background-color: transparent;
+  font-size: 17px;
+}
+
+footer .contact h3 {
+  margin-bottom: 16px;
+  font-size: 20px;
+  font-weight: 900;
+}
+
+footer {
+  margin: auto;
+  position: relative;
   color: #3f3c3c;
-  font-size: 41px;
+}
+
+footer .wrapper {
+  width: 100%;
+}
+
+footer p {
+  padding-left: 88px;
+}
+
+.footer-down {
+  width: 86.7%;
+  position: absolute;
+  z-index: 4;
+  left: 6.65%;
+  top: none;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 32px 0;
+  border-top: 2px solid #f0f8ff;
+}
+
+.bootstrap {
+  color: #228b51;
+}
+
+.facebook {
+  padding: 6px 10px 3px;
+}
+
+.facebook {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.facebook::before {
+  content: "";
+  font-family: "fontAwesome";
+  display: flex;
+  text-indent: 0;
+}
+
+.linkedin {
+  padding: 6px 8px 3px;
+}
+
+.linkedin {
+  display: flex;
+  text-indent: -9999px;
+}
+
+.linkedin::before {
+  content: "";
+  font-family: "fontAwesome";
+  display: flex;
+  text-indent: 0;
+}
+
+.made-with {
+  color: #767676;
+}
+
+.made-with::after {
+  content: "";
+  font-family: "fontAwesome";
+}
+
+.made-with::after {
+  padding-left: 3px;
+  color: #ff0000;
+}
+
+.icon {
+  border: 1px solid #3f3c3c;
+}
+
+.icon a {
+  color: #767676;
+  font-size: 20px;
 }
 
 /*=================================
-  Banner styling ends here
-=================================*/
-/*=================================
-  main styling ends here
-=================================*/
-/*==========================
   footer styling ends here
 =================================*/
 html {

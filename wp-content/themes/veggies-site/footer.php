@@ -29,7 +29,6 @@ $linkdin_icon_link_title = $linkdin_icon_link['title'];
 $backgroud_image = get_field("backgroud_image", 'option');
 $backgroud_image_url = $backgroud_image['url'];
 $backgroud_image_alt = $backgroud_image['alt'];
-echo $textarea_placeholder;
 ?>
 </main>
 <!--main section end-->
