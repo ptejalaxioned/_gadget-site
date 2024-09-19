@@ -34,9 +34,8 @@ function my_theme_enqueue_scripts()
   // Enqueue menu-block-styling
   wp_enqueue_style('menu-block-styling', get_template_directory_uri() . '/assets/css/menu-block.css', array(), '1.0', 'all');
 
-   // Enqueue footer-styling
-   wp_enqueue_style('footer-style-styling', get_template_directory_uri() . '/assets/css/footer-style.css', array(), '1.0', 'all');
-
+  // Enqueue footer-styling
+  wp_enqueue_style('footer-style-styling', get_template_directory_uri() . '/assets/css/footer-style.css', array(), '1.0', 'all');
 
   // Enqueue Font Awesome script
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null, true);
@@ -46,13 +45,6 @@ function my_theme_enqueue_scripts()
     'ajaxurl' => admin_url('admin-ajax.php')
   ));
 }
-
-//Post Option Remove
-function remove_posts_menu()
-{
-  remove_menu_page('edit.php');
-}
-add_action('admin_init', 'remove_posts_menu');
 
 //register nav menus
 register_nav_menus(
@@ -85,3 +77,33 @@ if (function_exists('acf_add_options_page')) {
 }
 
 require_once 'functions/func-acf-block-register.php';
+
+function my_custom_taxonomy_menutype() {
+  $labels = array(
+      'name'              => _x( 'Menu Types', 'taxonomy general name' ),
+      'singular_name'     => _x( 'Menu Type', 'taxonomy singular name' ),
+      'search_items'      => __( 'Search Menu Types' ),
+      'all_items'         => __( 'All Menu Types' ),
+      'parent_item'       => __( 'Parent Menu Type' ),
+      'parent_item_colon' => __( 'Parent Menu Type:' ),
+      'edit_item'         => __( 'Edit Menu Type' ),
+      'update_item'       => __( 'Update Menu Type' ),
+      'add_new_item'      => __( 'Add New Menu Type' ),
+      'new_item_name'     => __( 'New Menu Type Name' ),
+      'menu_name'         => __( 'Menu Types' ),
+  );
+
+  $args = array(
+      'hierarchical'      => true, // Acts like categories (set to false for tags behavior)
+      'labels'            => $labels,
+      'show_ui'           => true,
+      'show_admin_column' => true,
+      'query_var'         => true,
+      'rewrite'           => array( 'slug' => 'menutype' ),
+  );
+
+  register_taxonomy( 'menutype', array( 'post' ), $args );
+}
+add_action( 'init', 'my_custom_taxonomy_menutype' );
+
+?>
