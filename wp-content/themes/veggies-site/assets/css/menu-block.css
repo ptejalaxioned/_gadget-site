@@ -1,0 +1,68 @@
+/*=================================
+  menu styling starts here
+=================================*/
+.menu {
+  padding: 80px 0;
+  color: #767676;
+}
+
+.menu-name-list {
+  margin: 70px auto 44px;
+  display: flex;
+  justify-content: center;
+}
+
+.menu-name-list a {
+  padding: 10px 17px;
+  color: #767676;
+}
+
+.main-menu-list {
+  width: 100%;
+  display: flex;
+  gap: 51px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-menu-list li {
+  width: 47.7%;
+  display: flex;
+}
+
+.price {
+  padding-top: 3px;
+}
+
+.price::after {
+  content: "$";
+  font-family: "fontAwesome";
+}
+
+.menu-div {
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.dish-name {
+  display: flex;
+  gap: 3px;
+  font-size: 19px;
+}
+
+.dish-name::after {
+  content: " ";
+  font-family: "fontAwesome";
+}
+
+.dish-name::after {
+  width: 47.4%;
+  height: 17px;
+  border-bottom: 2px dotted #767676;
+}
+
+/*=================================
+  menu styling ends here
+=================================*/
