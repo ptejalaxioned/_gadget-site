@@ -179,7 +179,7 @@ $backgroud_image_alt = $backgroud_image['alt'];
                 target="_blank"
                 class="facebook social-media"
                 title="<?php echo $facebook_icon_link_title ?>"
-                rel="noopener noreferrer"><?php echo $facebook_icon_link_title ?>
+                rel="noopener noreferrer">
                 <img src="<?php echo $facebook_icon_image_url ?>" alt="<?php echo $facebook_icon_image_alt ?>">
               </a>
             </li>
@@ -191,7 +191,7 @@ $backgroud_image_alt = $backgroud_image['alt'];
                 target="_blank"
                 class="linkdin social-media"
                 title="<?php echo $linkdin_icon_link_title ?>"
-                rel="noopener noreferrer"><?php echo $linkdin_icon_link_title ?>
+                rel="noopener noreferrer">
                 <img src="<?php echo $linkdin_icon_image_url ?>" alt="<?php echo $linkdin_icon_image_alt ?>">
               </a>
             </li>
