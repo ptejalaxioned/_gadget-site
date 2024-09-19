@@ -1,10 +1,10 @@
 <?php
 $list = get_field('list');
 ?>
+<?php if ($list) { ?>
 <!--turnip-green section start-->
 <section class="turnip-green">
   <div class="wrapper">
-  <?php if ($list) { ?>
   <ul class="turnip-green-list">
     <?php
     foreach ($list as $row) {
@@ -22,8 +22,7 @@ $list = get_field('list');
     }
     ?>
   </ul>
-<?php } ?>
   </div>
 </section>
 <!--turnip-green section end-->
-
+<?php } ?>
