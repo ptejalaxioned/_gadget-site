@@ -16,19 +16,14 @@ $bootstrap_theme_link_title = $bootstrap_theme_link['title'];
 $copyright_text = get_field("copyright_text", 'option');
 $facebook_icon = get_field("facebook_icon", 'option');
 $facebook_icon_image = $facebook_icon['image'];
-$facebook_icon_image_url = $facebook_icon_image['url'];
-$facebook_icon_image_alt = $facebook_icon_image['alt'];
 $facebook_icon_link = $facebook_icon['link'];
 $facebook_icon_link_title = $facebook_icon_link['title'];
 $linkdin_icon = get_field("linkdin_icon", 'option');
 $linkdin_icon_image = $linkdin_icon['image'];
-$linkdin_icon_image_url = $linkdin_icon_image['url'];
-$linkdin_icon_image_alt = $linkdin_icon_image['alt'];
 $linkdin_icon_link = $linkdin_icon['link'];
 $linkdin_icon_link_title = $linkdin_icon_link['title'];
 $backgroud_image = get_field("backgroud_image", 'option');
-$backgroud_image_url = $backgroud_image['url'];
-$backgroud_image_alt = $backgroud_image['alt'];
+
 ?>
 </main>
 <!--main section end-->
@@ -45,7 +40,9 @@ $backgroud_image_alt = $backgroud_image['alt'];
       <?php
       if ($backgroud_image) { ?>
         <figure class="veggies">
-          <img src="<?php echo $backgroud_image_url ?>" alt="<?php echo $backgroud_image_alt ?>" />
+          <?php
+          echo wp_get_attachment_image($backgroud_image, [1279,852], false);
+          ?>
         </figure>
       <?php } ?>
       <?php
@@ -180,7 +177,9 @@ $backgroud_image_alt = $backgroud_image['alt'];
                 class="facebook social-media"
                 title="<?php echo $facebook_icon_link_title ?>"
                 rel="noopener noreferrer">
-                <img src="<?php echo $facebook_icon_image_url ?>" alt="<?php echo $facebook_icon_image_alt ?>">
+                <?php
+                echo wp_get_attachment_image($facebook_icon_image, 'thumbnail', false);
+                ?>
               </a>
             </li>
           <?php } ?>
@@ -192,7 +191,9 @@ $backgroud_image_alt = $backgroud_image['alt'];
                 class="linkdin social-media"
                 title="<?php echo $linkdin_icon_link_title ?>"
                 rel="noopener noreferrer">
-                <img src="<?php echo $linkdin_icon_image_url ?>" alt="<?php echo $linkdin_icon_image_alt ?>">
+                <?php
+                echo wp_get_attachment_image($linkdin_icon_image, 'thumbnail', false);
+                ?>
               </a>
             </li>
           <?php } ?>

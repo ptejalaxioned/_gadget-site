@@ -17,10 +17,12 @@ $image_list = get_field('image_list');
         <ul class="img-list">
           <?php
           foreach ($image_list as $image) {
-            $image_url = $image['url'];
-            $image_alt = $image['alt'];
           ?>
-            <li><img src="<?php echo $image_url ?>" alt="<?php echo $image_alt ?>" /></li>
+            <li>
+              <?php
+              echo wp_get_attachment_image($image,[193,189], false);
+              ?>
+            </li>
           <?php
           }
           ?>
