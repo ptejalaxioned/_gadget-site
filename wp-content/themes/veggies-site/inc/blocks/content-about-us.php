@@ -12,10 +12,7 @@ $image = get_field('image');
       <?php if ($heading || $paragraph || $signature_image) { ?>
         <div class="about-us-left">
           <?php if ($heading) { ?>
-            <div class="heading-span">
-              <h2 class="single-caps"><?php echo $heading ?></h2>
-              <span class="line-h"> line </span>
-            </div>
+              <h2 class="single-caps line-below"><?php echo $heading ?></h2>
           <?php } ?>
           <?php if ($paragraph) { ?>
             <p class="single-caps">

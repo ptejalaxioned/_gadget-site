@@ -63,10 +63,7 @@ $backgroud_image = get_field("backgroud_image", 'option');
           <!-- <div class="contact-content"> -->
           <?php
           if ($contact_heading) { ?>
-            <div class="heading-span">
-              <h2 class="single-caps"><?php echo $contact_heading ?></h2>
-              <span class="line-h"> line </span>
-            </div>
+            <h2 class="single-caps line-below"><?php echo $contact_heading ?></h2>
           <?php } ?>
           <?php
           if ($veggies_heading || $address || $reservations_heading || $email || $phone_number) { ?>
