@@ -8,7 +8,7 @@ $menu_type  = get_field('menu_type');
   <section class="menu">
     <div class="wrapper">
       <?php if ($heading) { ?>
-          <h2 class="single-caps line-below"><?php echo $heading ?></h2>
+        <h2 class="single-caps line-below"><?php echo $heading ?></h2>
       <?php } ?>
       <?php if ($menu_type) { ?>
         <ul class="menu-name-list">

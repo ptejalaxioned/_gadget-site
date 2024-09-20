@@ -14,9 +14,9 @@ $list = get_field('list');
         ?>
           <li>
             <figure class="turnip-green-image">
-            <?php
-            echo wp_get_attachment_image($image,  [200, 200], false);
-            ?>
+              <?php
+              echo wp_get_attachment_image($image,  [200, 200], false);
+              ?>
             </figure>
             <h4 class="all-caps"><?php echo $heading ?></h4>
             <p class="single-caps">

@@ -8,7 +8,7 @@ $image_list = get_field('image_list');
   <section class="specials">
     <div class="wrapper">
       <?php if ($heading) { ?>
-          <h2 class="single-caps line-below"><?php echo $heading ?></h2>
+        <h2 class="single-caps line-below"><?php echo $heading ?></h2>
       <?php } ?>
       <?php if ($image_list) { ?>
         <ul class="img-list">
@@ -17,7 +17,7 @@ $image_list = get_field('image_list');
           ?>
             <li>
               <?php
-              echo wp_get_attachment_image($image,[193,189], false);
+              echo wp_get_attachment_image($image, [193, 189], false);
               ?>
             </li>
           <?php
