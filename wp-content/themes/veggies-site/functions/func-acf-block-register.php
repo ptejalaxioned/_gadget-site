@@ -1,10 +1,10 @@
 <?php
 function my_acf_init() {
-  register_acf_blocks('banner', 'banner', 'A custom banner block', '/inc/blocks/content-banner.php', 'database-import');
-  register_acf_blocks('turnip-green', 'turnip-green', 'A custom turnip-green block', '/inc/blocks/content-turnip-green.php', 'admin-comments');
+  register_acf_blocks('banner', 'banner', 'A custom banner block', '/inc/blocks/content-banner.php', 'admin-page');
+  register_acf_blocks('turnip-green', 'turnip-green', 'A custom turnip-green block', '/inc/blocks/content-turnip-green.php', 'food');
   register_acf_blocks('specials', 'specials', 'A custom specials block', '/inc/blocks/content-specials.php', 'admin-comments');
   register_acf_blocks('about-us', 'about-us', 'A custom about-us block', '/inc/blocks/content-about-us.php', 'admin-comments');
-  register_acf_blocks('menu', 'menu', 'A custom menu block', '/inc/blocks/content-menu.php', 'admin-comments');
+  register_acf_blocks('menu', 'menu', 'A custom menu block', '/inc/blocks/content-menu.php', 'welcome-widgets-menus');
 }
 
 
