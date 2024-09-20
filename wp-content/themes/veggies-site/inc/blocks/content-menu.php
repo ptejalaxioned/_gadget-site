@@ -1,6 +1,7 @@
 <?php
 $heading = get_field('heading');
 $menu_list  = get_field('menu_list');
+$menu_type  = get_field('menu_type');
 ?>
 <?php if ($heading || $menu_list) { ?>
   <!-- menu section start-->
@@ -12,23 +13,20 @@ $menu_list  = get_field('menu_list');
           <span class="line-h"> line </span>
         </div>
       <?php } ?>
-      <ul class="menu-name-list">
-        <?php
-        $menu_types = get_terms(array(
-          'taxonomy'   => 'menutype',
-          'hide_empty' => false,
-        ));
-        ?>
-        <?php foreach ($menu_types as $menu_type) { ?>
-          <li>
-            <a
-              href="#FIXME"
-              class="<?php echo esc_html($menu_type->slug); ?> first-caps"
-              title="<?php echo esc_html($menu_type->name); ?>"
-              target="_self"><?php echo esc_html($menu_type->name); ?></a>
-          </li>
-        <?php } ?>
-      </ul>
+      <?php if ($menu_type) { ?>
+        <ul class="menu-name-list">
+          <?php foreach ($menu_type as $menu) { 
+            $term = get_term($menu); ?>
+            <li>
+              <a
+                href="#FIXME"
+                class="<?php echo $term->slug?> first-caps"
+                title="<?php echo $term->name?>"
+                target="_self"><?php echo $term->name?></a>
+            </li>
+            <?php } ?>
+        </ul>
+      <?php } ?>
       <?php if ($menu_list) { ?>
         <ul class="main-menu-list">
           <?php
