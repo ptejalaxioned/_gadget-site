@@ -15,16 +15,16 @@ $menu_type  = get_field('menu_type');
       <?php } ?>
       <?php if ($menu_type) { ?>
         <ul class="menu-name-list">
-          <?php foreach ($menu_type as $menu) { 
+          <?php foreach ($menu_type as $menu) {
             $term = get_term($menu); ?>
             <li>
               <a
                 href="#FIXME"
-                class="<?php echo $term->slug?> first-caps"
-                title="<?php echo $term->name?>"
-                target="_self"><?php echo $term->name?></a>
+                class="<?php echo $term->slug ?> first-caps"
+                title="<?php echo $term->name ?>"
+                target="_self"><?php echo $term->name ?></a>
             </li>
-            <?php } ?>
+          <?php } ?>
         </ul>
       <?php } ?>
       <?php if ($menu_list) { ?>
