@@ -16,13 +16,14 @@ function register_acf_blocks($slug, $title, $description, $template_loc, $icon)
       'title'             => __($title),
       'description'       => __($description),
       'render_callback'   => 'my_acf_block_render_callback',
-      'render_template' => get_theme_file_path() . $template_loc,
+      'render_template'   => get_theme_file_path() . $template_loc,
       'category'          => 'formatting',
       'icon'              => $icon,
       'keywords'          => array($slug),
     ));
   }
 }
+
 function my_acf_block_render_callback($block)
 {
   // convert name ("acf/testimonial") into path friendly slug ("testimonial")
