@@ -40,6 +40,9 @@ function my_theme_enqueue_scripts()
   // Enqueue line-style styling
   wp_enqueue_style('p-custom-styling', get_template_directory_uri() . '/assets/css/line-style.css', array(), '1.0', 'all');
 
+  // Enqueue output.css styling
+  wp_enqueue_style('tailwindcss', get_template_directory_uri() . '/src/output.css' , array(), '1.0', 'all');
+
   // Enqueue Font Awesome script
   wp_enqueue_script('font-awesome', 'https://kit.fontawesome.com/5edb8394fa.js', array(), null);
 

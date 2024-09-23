@@ -12,7 +12,7 @@ $image = get_field('image');
       <?php if ($heading || $paragraph || $signature_image) { ?>
         <div class="about-us-left">
           <?php if ($heading) { ?>
-              <h2 class="single-caps line-below"><?php echo $heading ?></h2>
+            <h2 class="single-caps line-below"><?php echo $heading ?></h2>
           <?php } ?>
           <?php if ($paragraph) { ?>
             <p class="single-caps">
@@ -23,7 +23,7 @@ $image = get_field('image');
             <div class="sign-div">
               <figure class="sign">
                 <?php
-                echo wp_get_attachment_image($signature_image, [256,147], false);
+                echo wp_get_attachment_image($signature_image, [256, 147], false);
                 ?>
               </figure>
             </div>
@@ -34,7 +34,7 @@ $image = get_field('image');
         <div class="about-us-right">
           <figure class="green">
             <?php
-            echo wp_get_attachment_image($image, [508,432], false);
+            echo wp_get_attachment_image($image, [508, 432], false);
             ?>
           </figure>
         </div>

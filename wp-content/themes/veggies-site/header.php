@@ -14,6 +14,9 @@
   <!--container start-->
   <div class="container">
     <!--header section start-->
+    <div class="bg-blue-500 text-white p-4">
+  Hello, Tailwind!
+</div>
     <header>
       <div class="wrapper">
         <nav>
