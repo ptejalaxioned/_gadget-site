@@ -222,30 +222,15 @@ li {
   text-transform: capitalize;
 }
 
-h2 {
+.heading2{
   padding-bottom: 3px;
   color: #767676;
   font-size: 44px;
   font-weight: 900;
 }
-
 /*=================================
   Header styling starts here
 =================================*/
-header {
-  width: 100%;
-  padding: 20px 0px;
-  position: absolute;
-  z-index: 3;
-  left: 0;
-  top: 0;
-}
-
-.nav-list {
-  display: flex;
-  justify-content: end;
-}
-
 .nav-list a {
   padding: 12px 13px;
   border: 1px solid transparent;
@@ -253,15 +238,9 @@ header {
   font-size: 17px;
   font-weight: 900;
 }
-
-.hamburger {
-  display: none;
-}
-
 /*=================================
   Header styling ends here
 =================================*/
-
 html {
   margin-top: 0px;
 }

@@ -14,13 +14,10 @@
   <!--container start-->
   <div class="container">
     <!--header section start-->
-    <div class="bg-blue-500 text-white p-4">
-  Hello, Tailwind!
-</div>
-    <header>
+    <header class="w-full py-5 absolute z-3 left-0 top-0">
       <div class="wrapper">
         <nav>
-          <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list"))
+          <?php wp_nav_menu(array("theme_location" => "primary-menu", "menu_class" => "nav-list flex justify-end", ))
           ?>
         </nav>
     </header>
