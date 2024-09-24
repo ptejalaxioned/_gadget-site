@@ -17,7 +17,7 @@ add_action('wp_enqueue_scripts', 'my_theme_enqueue_scripts');
 function my_theme_enqueue_scripts()
 {
   // Enqueue custom styling
-  wp_enqueue_style('custom-styling', get_template_directory_uri() . '/assets/css/my-style.css', array(), '1.0', 'all');
+  wp_enqueue_style('custom-styling', get_template_directory_uri() . '/assets/css/my-style-copy.css', array(), '1.0', 'all');
 
   // Enqueue banner-block-styling
   wp_enqueue_style('banner-block-styling', get_template_directory_uri() . '/assets/css/banner-block-copy.css', array(), '1.0', 'all');
@@ -29,7 +29,7 @@ function my_theme_enqueue_scripts()
   wp_enqueue_style('specials-block-styling', get_template_directory_uri() . '/assets/css/specials-block.css', array(), '1.0', 'all');
 
   // Enqueue about-us-block-styling
-  wp_enqueue_style('about-us-block-styling', get_template_directory_uri() . '/assets/css/about-us-block.css', array(), '1.0', 'all');
+  wp_enqueue_style('about-us-block-styling', get_template_directory_uri() . '/assets/css/about-us-block-copy.css', array(), '1.0', 'all');
 
   // Enqueue menu-block-styling
   wp_enqueue_style('menu-block-styling', get_template_directory_uri() . '/assets/css/menu-block.css', array(), '1.0', 'all');
@@ -113,18 +113,44 @@ function my_custom_taxonomy_menutype()
 }
 add_action('init', 'my_custom_taxonomy_menutype');
 
-//linkttributes Function
-function linkAttributes($link)
+
+//linkAttributes Function
+function linkAttributes($link, $class, $content = "")
 {
   $link_url = str_replace('http://', '', $link['url']);
   $link_target = $link['target'];
   $link_title = $link['title'];
+
+  if ($link_title == "Email" || $link_title == "Phone Number") {
+    $content = $link_url;
+  }
+
+  if ($content == "") {
+    $content = $link_title;
+  }
+
   if ($link_target == "_blank") {
     $rel = "rel='noopener noreferrer'";
-    $link_array = array($link_url, $link_target, $link_title, $rel);
-  } else {
-    $link_array = array($link_url, $link_target, $link_title);
+    $anchorTag = "<a href=\"$link_url\" 
+                     target=\"$link_target\" 
+                     class=\"$class\" 
+                     title=\"$link_title\" 
+                     $rel>
+                      $content
+                 </a>";
+    if ($link_title == "Email") {
+      $anchorTag  = substr_replace($anchorTag, "mailto:", 9, 0);
+    } else if ($link_title == "Phone Number") {
+      $anchorTag  = substr_replace($anchorTag, "tel:", 9, 0);
+    }
+  } else if ($link_target == "") {
+    $link_target = "_self";
+    $anchorTag = "<a href=\"$link_url\" 
+                     target=\"$link_target\" 
+                     class=\"$class\" 
+                     title=\"$link_title\">
+                     $content
+                 </a>";
   }
-  return $link_array;
+  return $anchorTag;
 }
-?>

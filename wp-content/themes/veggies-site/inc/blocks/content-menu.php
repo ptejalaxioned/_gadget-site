@@ -13,14 +13,14 @@ $menu_type  = get_field('menu_type');
       <?php if ($menu_type) { ?>
         <ul class="menu-name-list">
           <?php foreach ($menu_type as $menu) {
-            $term = get_term($menu); 
-            $term_name=$term->name ;
-            $term_slug=$term->slug ;
-            ?>
+            $term = get_term($menu);
+            $term_name = $term->name;
+            $term_slug = $term->slug;
+          ?>
             <li>
               <a
                 href="#FIXME"
-                class="<?php echo $term_slug?> first-caps"
+                class="<?php echo $term_slug ?> first-caps"
                 title="<?php echo  $term_name ?>"
                 target="_self"><?php echo  $term_name ?></a>
             </li>

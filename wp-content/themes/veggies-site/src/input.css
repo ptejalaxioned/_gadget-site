@@ -2,7 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-/* @layer components {
+@layer components {
+ 
+  .all-caps,
+  .single-caps::first-letter {
+    @apply uppercase; 
+  }
+/* 
   .wrapper {
     @apply max-w-screen-2xl w-10/12 mx-auto; 
   }
@@ -35,4 +41,5 @@
   .line-below::first-letter {
      @apply uppercase; 
   }
-} */
+     */
+} 

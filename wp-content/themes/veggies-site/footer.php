@@ -13,22 +13,16 @@ $button_text = get_field("button_text", 'option');
 $footer_left_text = get_field("footer_left_text", 'option');
 $bootstrap_theme_link = get_field("bootstrap_theme_link", 'option');
 $copyright_text = get_field("copyright_text", 'option');
-$facebook_icon = get_field("facebook_icon", 'option');
-$facebook_icon_image = $facebook_icon['image'];
-$facebook_icon_link = $facebook_icon['link'];
-$linkdin_icon = get_field("linkdin_icon", 'option');
-$linkdin_icon_image = $linkdin_icon['image'];
-$linkdin_icon_link = $linkdin_icon['link'];
 $backgroud_image = get_field("backgroud_image", 'option');
+$social_media_icons = get_field("social_media_icons", 'option');
 ?>
 </main>
 <!--main section end-->
 <?php if (
   $contact_heading || $veggies_heading || $address || $reservations_heading ||
   $email || $phone_number || $contact_form_heading || $name_placeholder || $email_placeholder ||
-  $textarea_placeholder || $button_text || $bootstrap_theme_link || $copyright_text ||
-  $facebook_icon_image || $facebook_icon_link || $linkdin_icon_image || $linkdin_icon_link
-  || $backgroud_image
+  $textarea_placeholder || $button_text || $bootstrap_theme_link || $copyright_text || $backgroud_image
+  || $social_media_icons
 ) { ?>
   <!--footer section start-->
   <footer>
@@ -48,7 +42,6 @@ $backgroud_image = get_field("backgroud_image", 'option');
         $textarea_placeholder || $button_text
       ) { ?>
         <div class="contact">
-          <!-- <div class="contact-content"> -->
           <?php
           if ($contact_heading) { ?>
             <h2 class="single-caps line-below heading2"><?php echo $contact_heading ?></h2>
@@ -73,25 +66,11 @@ $backgroud_image = get_field("backgroud_image", 'option');
                   <?php if ($reservations_heading) { ?>
                     <h3 class="all-caps"><?php echo $reservations_heading ?></h3>
                     <?php if ($email) {
-                      $link_array = linkAttributes($email);
-                    ?>
-                      <a
-                        href="mailto:<?php echo $link_array[0]; ?>"
-                        target="<?php echo $link_array[1];  ?>"
-                        class="email"
-                        title="<?php echo $link_array[2];  ?>"
-                        <?php echo $link_array[3]; ?>><?php echo $link_array[0]; ?></a>
-                    <?php } ?>
+                      echo linkAttributes($email, 'email');
+                    } ?>
                     <?php if ($phone_number) {
-                      $link_array = linkAttributes($phone_number);
-                    ?>
-                      <a
-                        href="tel:<?php echo $link_array[0]; ?>"
-                        target="<?php echo $link_array[1]; ?>"
-                        class="phone-number"
-                        title="<?php echo $link_array[2]; ?>"
-                        <?php echo $link_array[3]; ?>><?php echo $link_array[0]; ?></a>
-                    <?php } ?>
+                      echo linkAttributes($phone_number, 'phone-number');
+                    } ?>
                 </li>
               <?php } ?>
             </ul>
@@ -145,7 +124,7 @@ $backgroud_image = get_field("backgroud_image", 'option');
         </div>
     </div>
   <?php } ?>
-  <?php if ($footer_left_text || $bootstrap_theme_link || $copyright_text || $facebook_icon_image_url || $facebook_icon_link || $linkdin_icon_image_url || $linkdin_icon_link) { ?>
+  <?php if ($footer_left_text || $bootstrap_theme_link || $copyright_text || $social_media_icons) { ?>
     <div class="footer-down">
       <?php if ($footer_left_text || $bootstrap_theme_link || $copyright_text) { ?>
         <p>
@@ -153,57 +132,27 @@ $backgroud_image = get_field("backgroud_image", 'option');
             <span class="single-caps made-with"><?php echo $footer_left_text ?></span>
           <?php } ?>
           <?php if ($bootstrap_theme_link) {
-              $link_array = linkAttributes($bootstrap_theme_link);
-          ?>
-            <a
-              href="<?php echo $link_array[0]; ?>"
-              class="bootstrap first-caps"
-              target="<?php echo $link_array[1]; ?>"
-              title="<?php echo $link_array[2]; ?>"
-              <?php echo $link_array[3]; ?>><?php echo $link_array[2]; ?></a>
-          <?php } ?>
+              echo linkAttributes($bootstrap_theme_link, 'bootstrap first-caps');
+            } ?>
           <?php if ($copyright_text) { ?>
             <?php echo $copyright_text ?>
           <?php } ?>
         </p>
       <?php } ?>
-      <?php if ($facebook_icon_image || $facebook_icon_link || $linkdin_icon_image || $linkdin_icon_link) { ?>
+      <?php if ($social_media_icons) { ?>
         <ul class="icon-list">
-          <?php if ($facebook_icon_image || $facebook_icon_link) {
-              $link_array = linkAttributes($facebook_icon_link);
+          <?php
+            foreach ($social_media_icons as $icon) {
+              $image = $icon['image'];
+              $link = $icon['link'];
           ?>
             <li class="icon">
-              <a
-                href="<?php echo $link_array[0] ?>"
-                target="<?php echo $link_array[1] ?>"
-                class="facebook social-media"
-                title="<?php echo $link_array[2] ?>"
-                <?php echo $link_array[3] ?>>
-                <?php
-                echo wp_get_attachment_image($facebook_icon_image, 'thumbnail', false);
-                ?>
-              </a>
+              <?php echo linkAttributes($link, 'social-media', wp_get_attachment_image($image, 'thumbnail', false)); ?>
             </li>
           <?php } ?>
-          <?php if ($linkdin_icon_image || $linkdin_icon_link) {
-              $link_array = linkAttributes($linkdin_icon_link);
-          ?>
-            <li class="icon">
-              <a
-                href="<?php echo $link_array[0]  ?>"
-                target="<?php echo $link_array[1] ?>"
-                class="linkdin social-media"
-                title="<?php echo $link_array[2] ?>"
-                <?php echo $link_array[3] ?>>
-                <?php
-                echo wp_get_attachment_image($linkdin_icon_image, 'thumbnail', false);
-                ?>
-              </a>
-            </li>
-          <?php } ?>
-        <?php } ?>
         </ul>
       <?php } ?>
+    <?php } ?>
     </div>
   <?php } ?>
   </div>

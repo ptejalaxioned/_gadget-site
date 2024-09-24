@@ -4,7 +4,6 @@ $paragraph = get_field('paragraph');
 $signature_image = get_field('signature_image');
 $image = get_field('image');
 ?>
-
 <?php if ($heading || $paragraph || $signature_image || $image) { ?>
   <!--about-us section start-->
   <section class="about-us">
@@ -20,22 +19,20 @@ $image = get_field('image');
             </p>
           <?php } ?>
           <?php if ($signature_image) { ?>
-            <div class="sign-div">
-              <figure class="sign">
-                <?php
-                echo wp_get_attachment_image($signature_image, [256, 147], false);
-                ?>
-              </figure>
-            </div>
+            <figure class="sign sign-div">
+              <?php
+              echo wp_get_attachment_image($signature_image, [256, 147], false);
+              ?>
+            </figure>
           <?php } ?>
         </div>
       <?php } ?>
       <?php if ($image) { ?>
-          <figure class="about-us-right green">
-            <?php
-            echo wp_get_attachment_image($image, [508, 432], false);
-            ?>
-          </figure>
+        <figure class="about-us-right green">
+          <?php
+          echo wp_get_attachment_image($image, [508, 432], false);
+          ?>
+        </figure>
       <?php } ?>
     </div>
   </section>

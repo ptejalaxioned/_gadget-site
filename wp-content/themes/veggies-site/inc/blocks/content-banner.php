@@ -2,7 +2,6 @@
 $banner_hedaing = get_field('banner_heading');
 $background_image = get_field('background_image');
 ?>
-
 <?php if ($background_image || $banner_hedaing) { ?>
   <!--banner section start-->
   <section class="banner">
