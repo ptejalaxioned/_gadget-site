@@ -4,13 +4,7 @@ $veggies_heading = get_field("veggies_heading", 'option');
 $address = get_field("address", 'option');
 $reservations_heading = get_field("reservations_heading", 'option');
 $email = get_field("email", 'option');
-$email_url = str_replace('http://', '', $email['url']);
-$email_title = $email['title'];
-$email_target = $email['target'];
 $phone_number = get_field("phone_number", 'option');
-$phone_number_url = str_replace('http://', '', $phone_number['url']);;
-$phone_number_title = $phone_number['title'];
-$phone_number_target = $phone_number['target'];
 $contact_form_heading = get_field("contact_form_heading", 'option');
 $name_placeholder = get_field("name_placeholder", 'option');
 $email_placeholder = get_field("email_placeholder", 'option');
@@ -18,20 +12,28 @@ $textarea_placeholder = get_field("textarea_placeholder", 'option');
 $button_text = get_field("button_text", 'option');
 $footer_left_text = get_field("footer_left_text", 'option');
 $bootstrap_theme_link = get_field("bootstrap_theme_link", 'option');
-$bootstrap_theme_link_target = $bootstrap_theme_link['target'];
-$bootstrap_theme_link_title = $bootstrap_theme_link['title'];
 $copyright_text = get_field("copyright_text", 'option');
 $facebook_icon = get_field("facebook_icon", 'option');
 $facebook_icon_image = $facebook_icon['image'];
 $facebook_icon_link = $facebook_icon['link'];
-$facebook_icon_link_target = $facebook_icon_link['target'];
-$facebook_icon_link_title = $facebook_icon_link['title'];
 $linkdin_icon = get_field("linkdin_icon", 'option');
 $linkdin_icon_image = $linkdin_icon['image'];
 $linkdin_icon_link = $linkdin_icon['link'];
-$linkdin_icon_link_target = $linkdin_icon_link['target'];
-$linkdin_icon_link_title = $linkdin_icon_link['title'];
 $backgroud_image = get_field("backgroud_image", 'option');
+
+function linkAttributes($link)
+{
+  $link_url = str_replace('http://', '', $link['url']);
+  $link_target = $link['target'];
+  $link_title = $link['title'];
+  if ($link_target == "_blank") {
+    $rel = "rel='noopener noreferrer'";
+    $link_array = array($link_url, $link_target, $link_title, $rel);
+  } else {
+    $link_array = array($link_url, $link_target, $link_title);
+  }
+  return $link_array;
+}
 ?>
 </main>
 <!--main section end-->
@@ -63,7 +65,7 @@ $backgroud_image = get_field("backgroud_image", 'option');
           <!-- <div class="contact-content"> -->
           <?php
           if ($contact_heading) { ?>
-            <h2 class="single-caps line-below"><?php echo $contact_heading ?></h2>
+            <h2 class="single-caps line-below heading2"><?php echo $contact_heading ?></h2>
           <?php } ?>
           <?php
           if ($veggies_heading || $address || $reservations_heading || $email || $phone_number) { ?>
@@ -84,21 +86,25 @@ $backgroud_image = get_field("backgroud_image", 'option');
                 <li>
                   <?php if ($reservations_heading) { ?>
                     <h3 class="all-caps"><?php echo $reservations_heading ?></h3>
-                    <?php if ($email) { ?>
+                    <?php if ($email) {
+                      $link_array = linkAttributes($email);
+                    ?>
                       <a
-                        href="mailto:<?php echo $email_url ?>"
-                        target="<?php echo $email_target ?>"
+                        href="mailto:<?php echo $link_array[0]; ?>"
+                        target="<?php echo $link_array[1];  ?>"
                         class="email"
-                        title="<?php echo $email_title ?>"
-                        rel="noopener noreferrer"><?php echo $email_url ?></a>
+                        title="<?php echo $link_array[2];  ?>"
+                        <?php echo $link_array[3]; ?>><?php echo $link_array[0]; ?></a>
                     <?php } ?>
-                    <?php if ($phone_number) { ?>
+                    <?php if ($phone_number) {
+                      $link_array = linkAttributes($phone_number);
+                    ?>
                       <a
-                        href="tel:<?php echo $phone_number_url ?>"
-                        target="<?php echo $phone_number_target ?>"
+                        href="tel:<?php echo $link_array[0]; ?>"
+                        target="<?php echo $link_array[1]; ?>"
                         class="phone-number"
-                        title="<?php echo $phone_number_title ?>"
-                        rel="noopener noreferrer"><?php echo $phone_number_url ?></a>
+                        title="<?php echo $link_array[2]; ?>"
+                        <?php echo $link_array[3]; ?>><?php echo $link_array[0]; ?></a>
                     <?php } ?>
                 </li>
               <?php } ?>
@@ -160,12 +166,15 @@ $backgroud_image = get_field("backgroud_image", 'option');
           <?php if ($footer_left_text) { ?>
             <span class="single-caps made-with"><?php echo $footer_left_text ?></span>
           <?php } ?>
-          <?php if ($bootstrap_theme_link) { ?>
+          <?php if ($bootstrap_theme_link) {
+              $link_array = linkAttributes($bootstrap_theme_link);
+          ?>
             <a
-              href="<?php echo $bootstrap_theme_link ?>"
+              href="<?php echo $link_array[0]; ?>"
               class="bootstrap first-caps"
-              title="<?php echo $bootstrap_theme_link_title ?>"
-              target="<?php echo $bootstrap_theme_link_target ?>"><?php echo $bootstrap_theme_link_title ?></a>
+              target="<?php echo $link_array[1]; ?>"
+              title="<?php echo $link_array[2]; ?>"
+              <?php echo $link_array[3]; ?>><?php echo $link_array[2]; ?></a>
           <?php } ?>
           <?php if ($copyright_text) { ?>
             <?php echo $copyright_text ?>
@@ -174,28 +183,32 @@ $backgroud_image = get_field("backgroud_image", 'option');
       <?php } ?>
       <?php if ($facebook_icon_image || $facebook_icon_link || $linkdin_icon_image || $linkdin_icon_link) { ?>
         <ul class="icon-list">
-          <?php if ($facebook_icon_image || $facebook_icon_link) { ?>
+          <?php if ($facebook_icon_image || $facebook_icon_link) {
+              $link_array = linkAttributes($facebook_icon_link);
+          ?>
             <li class="icon">
               <a
-                href="<?php echo $facebook_icon_link ?>"
-                target="<?php echo $facebook_icon_link_target ?>"
+                href="<?php echo $link_array[0] ?>"
+                target="<?php echo $link_array[1] ?>"
                 class="facebook social-media"
-                title="<?php echo $facebook_icon_link_title ?>"
-                rel="noopener noreferrer">
+                title="<?php echo $link_array[2] ?>"
+                <?php echo $link_array[3] ?>>
                 <?php
                 echo wp_get_attachment_image($facebook_icon_image, 'thumbnail', false);
                 ?>
               </a>
             </li>
           <?php } ?>
-          <?php if ($linkdin_icon_image || $linkdin_icon_link) { ?>
+          <?php if ($linkdin_icon_image || $linkdin_icon_link) {
+              $link_array = linkAttributes($linkdin_icon_link);
+          ?>
             <li class="icon">
               <a
-                href="<?php echo $linkdin_icon_link ?>"
-                target="<?php echo $linkdin_icon_link_target ?>"
+                href="<?php echo $link_array[0]  ?>"
+                target="<?php echo $link_array[1] ?>"
                 class="linkdin social-media"
-                title="<?php echo $linkdin_icon_link_title ?>"
-                rel="noopener noreferrer">
+                title="<?php echo $link_array[2] ?>"
+                <?php echo $link_array[3] ?>>
                 <?php
                 echo wp_get_attachment_image($linkdin_icon_image, 'thumbnail', false);
                 ?>

@@ -1,5 +1,5 @@
 <?php
-$list = get_field('list');
+$turnip_green_list = get_field('list');
 ?>
 <?php if ($list) { ?>
   <!--turnip-green section start-->
@@ -7,10 +7,10 @@ $list = get_field('list');
     <div class="wrapper">
       <ul class="turnip-green-list">
         <?php
-        foreach ($list as $row) {
-          $heading = $row['heading'];
-          $paragraph = $row['paragraph'];
-          $image = $row['image'];
+        foreach ($turnip_green_list as $list) {
+          $heading = $list['heading'];
+          $paragraph = $list['paragraph'];
+          $image = $list['image'];
         ?>
           <li>
             <figure class="turnip-green-image">

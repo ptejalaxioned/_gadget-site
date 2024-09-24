@@ -8,18 +8,21 @@ $menu_type  = get_field('menu_type');
   <section class="menu">
     <div class="wrapper">
       <?php if ($heading) { ?>
-        <h2 class="single-caps line-below"><?php echo $heading ?></h2>
+        <h2 class="single-caps line-below heading2"><?php echo $heading ?></h2>
       <?php } ?>
       <?php if ($menu_type) { ?>
         <ul class="menu-name-list">
           <?php foreach ($menu_type as $menu) {
-            $term = get_term($menu); ?>
+            $term = get_term($menu); 
+            $term_name=$term->name ;
+            $term_slug=$term->slug ;
+            ?>
             <li>
               <a
                 href="#FIXME"
-                class="<?php echo $term->slug ?> first-caps"
-                title="<?php echo $term->name ?>"
-                target="_self"><?php echo $term->name ?></a>
+                class="<?php echo $term_slug?> first-caps"
+                title="<?php echo  $term_name ?>"
+                target="_self"><?php echo  $term_name ?></a>
             </li>
           <?php } ?>
         </ul>
@@ -27,10 +30,10 @@ $menu_type  = get_field('menu_type');
       <?php if ($menu_list) { ?>
         <ul class="main-menu-list">
           <?php
-          foreach ($menu_list as $row) {
-            $menu_name = $row['menu_name'];
-            $ingredients = $row['ingredients'];
-            $price = $row['price'];
+          foreach ($menu_list as $menu) {
+            $menu_name = $menu['menu_name'];
+            $ingredients = $menu['ingredients'];
+            $price = $menu['price'];
           ?>
             <li>
               <div class="menu-div">

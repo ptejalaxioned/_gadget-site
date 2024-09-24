@@ -592,36 +592,130 @@ video {
   position: absolute;
 }
 
+.relative {
+  position: relative;
+}
+
+.inset-x-3\/4 {
+  left: 75%;
+  right: 75%;
+}
+
+.inset-y-2\/4 {
+  top: 50%;
+  bottom: 50%;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
 .left-0 {
   left: 0px;
+}
+
+.right-0 {
+  right: 0px;
 }
 
 .top-0 {
   top: 0px;
 }
 
-.z-\[3\] {
-  z-index: 3;
-}
-
 .flex {
   display: flex;
+}
+
+.h-full {
+  height: 100%;
+}
+
+.w-2\/5 {
+  width: 40%;
 }
 
 .w-full {
   width: 100%;
 }
 
+.-translate-x-1\/2 {
+  --tw-translate-x: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.-translate-y-1\/2 {
+  --tw-translate-y: -50%;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
 .justify-end {
   justify-content: flex-end;
 }
 
-.py-\[20px\] {
-  padding-top: 20px;
-  padding-bottom: 20px;
+.object-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.py-4 {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
 .py-5 {
   padding-top: 1.25rem;
   padding-bottom: 1.25rem;
 }
+
+.text-center {
+  text-align: center;
+}
+
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+/* @layer components {
+  .wrapper {
+    @apply max-w-screen-2xl w-10/12 mx-auto; 
+  }
+  
+  .all-caps,
+  .single-caps::first-letter {
+    @apply uppercase; 
+  }
+  
+  .first-caps {
+    @apply capitalize; 
+  }
+  
+  .heading2{
+    @apply pb-1 text-lightgray text-4xl font-bold;
+  }
+  
+  .nav-list a {
+    @apply py-3xl px-3xl border border-transparent text-gray-500 text-4 font-bold;
+  }
+
+  .line-below::after {
+    @apply content-none w-64 border-2 border-darkgray;
+  }
+  
+  .line-below {
+    @apply flex flex-col items-center gap-8;
+  }
+  
+  .line-below::first-letter {
+     @apply uppercase; 
+  }
+} */
