@@ -14,13 +14,11 @@ $background_image = get_field('background_image');
           ?>
         </figure>
       <?php } ?>
-      <div class="banner-content w-2/5 absolute z-2 inset-x-3/4 right-0 inset-y-2/4 bottom-0 text-center -translate-x-1/2 -translate-y-1/2">
         <?php if ($banner_hedaing) { ?>
-          <h1 class="single-caps line-below text-4xl text-darkgray font-bold px-6 py-4">
+          <h1 class="single-caps line-below">
             <?php echo $banner_hedaing ?>
           </h1>
         <?php } ?>
-      </div>
     </div>
   </section>
   <!--banner section end-->

@@ -31,13 +31,11 @@ $image = get_field('image');
         </div>
       <?php } ?>
       <?php if ($image) { ?>
-        <div class="about-us-right">
-          <figure class="green">
+          <figure class="about-us-right green">
             <?php
             echo wp_get_attachment_image($image, [508, 432], false);
             ?>
           </figure>
-        </div>
       <?php } ?>
     </div>
   </section>

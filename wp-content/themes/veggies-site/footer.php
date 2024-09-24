@@ -20,20 +20,6 @@ $linkdin_icon = get_field("linkdin_icon", 'option');
 $linkdin_icon_image = $linkdin_icon['image'];
 $linkdin_icon_link = $linkdin_icon['link'];
 $backgroud_image = get_field("backgroud_image", 'option');
-
-function linkAttributes($link)
-{
-  $link_url = str_replace('http://', '', $link['url']);
-  $link_target = $link['target'];
-  $link_title = $link['title'];
-  if ($link_target == "_blank") {
-    $rel = "rel='noopener noreferrer'";
-    $link_array = array($link_url, $link_target, $link_title, $rel);
-  } else {
-    $link_array = array($link_url, $link_target, $link_title);
-  }
-  return $link_array;
-}
 ?>
 </main>
 <!--main section end-->
