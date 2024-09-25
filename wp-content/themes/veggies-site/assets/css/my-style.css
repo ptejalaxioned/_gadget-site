@@ -223,6 +223,9 @@ li {
   font-weight: 900;
 }
 
+html {
+  margin-top: 0px;
+}
 /*=================================
   Header styling starts here
 =================================*/
@@ -250,6 +253,28 @@ header {
 /*=================================
   Header styling ends here
 =================================*/
-html {
-  margin-top: 0px;
+.line-below::after {
+  content: "";
+  width: 16rem; 
+  border: 2px solid #a9a9a9; 
+}
+
+.line-below::first-letter {
+  text-transform: uppercase;
+}
+
+.price::after {
+  content: "$";
+  font-family: "fontAwesome";
+}
+
+.dish-name::after {
+  content: " ";
+  font-family: "fontAwesome";
+}
+
+.made-with::after {
+  content: "$";
+  padding-left: 0.25rem; 
+  color: #7f1d1d; 
 }

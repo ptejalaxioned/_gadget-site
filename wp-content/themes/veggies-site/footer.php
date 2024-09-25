@@ -25,8 +25,8 @@ $social_media_icons = get_field("social_media_icons", 'option');
   || $social_media_icons
 ) { ?>
   <!--footer section start-->
-  <footer>
-    <div class="wrapper">
+  <footer class="m-auto relative text-darkgray">
+    <div class="wrapper w-full">
       <?php
       if ($backgroud_image) { ?>
         <figure class="veggies">
@@ -41,18 +41,18 @@ $social_media_icons = get_field("social_media_icons", 'option');
         $email || $phone_number || $contact_form_heading || $name_placeholder || $email_placeholder ||
         $textarea_placeholder || $button_text
       ) { ?>
-        <div class="contact">
+        <div class="contact text-lightgray absolute z-2 left-2/4 top-0 w-4/12 mt-12 mx-auto mb-auto flex flex-col">
           <?php
           if ($contact_heading) { ?>
             <h2 class="single-caps line-below heading2"><?php echo $contact_heading ?></h2>
           <?php } ?>
           <?php
           if ($veggies_heading || $address || $reservations_heading || $email || $phone_number) { ?>
-            <ul class="contact-info-list">
+            <ul class="contact-info-list mt-20 mb-14 flex justify-between">
               <?php if ($veggies_heading || $address) { ?>
-                <li>
+                <li class="w-5/12">
                   <?php if ($veggies_heading) { ?>
-                    <h3 class="all-caps"><?php echo $veggies_heading ?></h3>
+                    <h3 class="all-caps  mb-4 text-5 font-bold"><?php echo $veggies_heading ?></h3>
                   <?php } ?>
                   <?php if ($address) { ?>
                     <address class="first-caps">
@@ -64,7 +64,7 @@ $social_media_icons = get_field("social_media_icons", 'option');
               <?php if ($reservations_heading || $email || $phone_number) { ?>
                 <li>
                   <?php if ($reservations_heading) { ?>
-                    <h3 class="all-caps"><?php echo $reservations_heading ?></h3>
+                    <h3 class="all-caps  mb-4 text-5 font-bold"><?php echo $reservations_heading ?></h3>
                     <?php if ($email) {
                       echo linkAttributes($email, 'email');
                     } ?>
@@ -83,7 +83,7 @@ $social_media_icons = get_field("social_media_icons", 'option');
             <div class="contact-form">
               <?php
               if ($contact_form_heading) { ?>
-                <h3 class="all-caps"><?php echo $contact_form_heading ?></h3>
+                <h3 class="all-caps mb-4 text-5 font-bold"><?php echo $contact_form_heading ?></h3>
               <?php } ?>
               <?php
               if (
@@ -92,27 +92,32 @@ $social_media_icons = get_field("social_media_icons", 'option');
               ) { ?>
                 <form action="#FIXME" method="post">
                   <?php if ($name_placeholder || $email_placeholder) { ?>
-                    <div class="name-email">
+                    <div class="name-email flex justify-between">
                       <?php if ($name_placeholder) { ?>
                         <div class="first-name">
-                          <input type="text" placeholder="<?php echo $name_placeholder ?>" id="fname" />
+                          <input type="text" placeholder="<?php echo $name_placeholder ?>" id="fname" 
+                          class="w-full py-2 px-3 border-none border-b-1 border-b-whitegray bg-transparent text-4"
+                          />
                         </div>
                       <?php } ?>
                       <?php if ($email_placeholder) { ?>
                         <div class="email-div">
-                          <input type="email" placeholder="<?php echo $email_placeholder ?>" id="email" />
+                          <input type="email" placeholder="<?php echo $email_placeholder ?>" id="email" 
+                          class="w-full py-2 px-3 border-none border-b-1 border-b-whitegray bg-transparent text-4"
+                          />
                         </div>
                       <?php } ?>
                     </div>
                   <?php } ?>
                   <?php if ($textarea_placeholder) { ?>
                     <div class="textarea">
-                      <textarea placeholder="<?php echo $textarea_placeholder ?>" id="textarea"></textarea>
+                      <textarea placeholder="<?php echo $textarea_placeholder ?>" id="textarea" class="h-52 w-full py-2 px-3 border-none
+              border-b-1 border-b-whitegray bg-transparent text-4 resize-none"></textarea>
                     </div>
                   <?php } ?>
                   <?php if ($button_text) { ?>
-                    <div class="send-button">
-                      <button type="submit" class="first-caps" formnovalidate>
+                    <div class="send-button mt-7 text-center">
+                      <button type="submit" class="first-caps py-4 px-7 border border-black bg-transparent text-lightgray text-4 font-bold" formnovalidate>
                         <?php echo $button_text ?>
                       </button>
                     </div>
@@ -125,11 +130,11 @@ $social_media_icons = get_field("social_media_icons", 'option');
     </div>
   <?php } ?>
   <?php if ($footer_left_text || $bootstrap_theme_link || $copyright_text || $social_media_icons) { ?>
-    <div class="footer-down">
+    <div class="footer-down w-10/12 absolute z-4 left-4 bottom-0 flex justify-between items-center py-8 border border-t-2 border-t-whitegray">
       <?php if ($footer_left_text || $bootstrap_theme_link || $copyright_text) { ?>
-        <p>
+        <p class="pl-20">
           <?php if ($footer_left_text) { ?>
-            <span class="single-caps made-with"><?php echo $footer_left_text ?></span>
+            <span class="single-caps made-with text-lightgray"><?php echo $footer_left_text ?></span>
           <?php } ?>
           <?php if ($bootstrap_theme_link) {
               echo linkAttributes($bootstrap_theme_link, 'bootstrap first-caps');
@@ -140,7 +145,7 @@ $social_media_icons = get_field("social_media_icons", 'option');
         </p>
       <?php } ?>
       <?php if ($social_media_icons) { ?>
-        <ul class="icon-list">
+        <ul class="icon-list flex gap-y-1">
           <?php
             foreach ($social_media_icons as $icon) {
               $image = $icon['image'];

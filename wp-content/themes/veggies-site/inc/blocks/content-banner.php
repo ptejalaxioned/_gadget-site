@@ -14,7 +14,7 @@ $background_image = get_field('background_image');
         </figure>
       <?php } ?>
         <?php if ($banner_hedaing) { ?>
-          <h1 class="single-caps line-below">
+          <h1 class="single-caps line-below w-2/5 absolute z-2 inset-x-3/4 right-0 inset-y-2/4 bottom-0 text-center -translate-x-1/2 -translate-y-1/2 text-4xl text-darkgray font-bold px-6 py-4">
             <?php echo $banner_hedaing ?>
           </h1>
         <?php } ?>

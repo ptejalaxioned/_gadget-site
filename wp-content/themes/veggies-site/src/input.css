@@ -3,43 +3,26 @@
 @tailwind utilities;
 
 @layer components {
- 
-  .all-caps,
-  .single-caps::first-letter {
-    @apply uppercase; 
-  }
-/* 
-  .wrapper {
-    @apply max-w-screen-2xl w-10/12 mx-auto; 
-  }
-  
-  .all-caps,
-  .single-caps::first-letter {
-    @apply uppercase; 
-  }
-  
   .first-caps {
     @apply capitalize; 
   }
-  
+
+  .wrapper {
+    @apply max-w-screen-2xl w-10/12 mx-auto; 
+  }
+
   .heading2{
     @apply pb-1 text-lightgray text-4xl font-bold;
   }
-  
-  .nav-list a {
-    @apply py-3xl px-3xl border border-transparent text-gray-500 text-4 font-bold;
-  }
-
-  .line-below::after {
-    @apply content-none w-64 border-2 border-darkgray;
-  }
-  
+     
   .line-below {
     @apply flex flex-col items-center gap-8;
   }
-  
-  .line-below::first-letter {
-     @apply uppercase; 
+  .bootstrap {
+    @apply text-darkgreen;
   }
-     */
+
 } 
+
+
+

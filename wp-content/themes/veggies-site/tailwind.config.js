@@ -11,13 +11,19 @@ module.exports = {
     "./inc/blocks/content-menu.php",
     "./footer.php",
   ],
-  // theme: {
-  //   extend: {
-  //     colors: {
-  //       darkgray: '#3f3c3c',
-  //       lightgray:'#767676',
-  //     },
-  //   },
-  // },
+  theme: {
+    extend: {
+      colors: {
+        darkgray: '#3f3c3c',
+        lightgray:'#767676',
+        whitegray:'#f0f8ff',
+        darkgreen:'#228b51',
+        yellowgray:'#e7b90e',
+      },
+      content:{
+        dollar:'$',
+      }
+    },
+  },
 };
 
