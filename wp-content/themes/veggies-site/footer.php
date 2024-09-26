@@ -50,7 +50,7 @@ $social_media_icons = get_field("social_media_icons", 'option');
           if ($veggies_heading || $address || $reservations_heading || $email || $phone_number) { ?>
             <ul class="contact-info-list mt-20 mb-14 flex justify-between">
               <?php if ($veggies_heading || $address) { ?>
-                <li class="w-5/12">
+                <li>
                   <?php if ($veggies_heading) { ?>
                     <h3 class="all-caps  mb-4 text-5 font-bold"><?php echo $veggies_heading ?></h3>
                   <?php } ?>
